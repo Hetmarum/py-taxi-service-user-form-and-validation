@@ -117,7 +117,6 @@ class DriverLicenseUpdateView(LoginRequiredMixin, UpdateView):
     template_name = "taxi/driver_license_form.html"
 
     def get_object(self, queryset=None):
-        # Always edit the logged-in user's license
         return self.request.user
 
     def get_success_url(self):
